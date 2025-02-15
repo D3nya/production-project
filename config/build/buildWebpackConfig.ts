@@ -19,7 +19,7 @@ export function buildWebpackConfig({ mode, paths, port, isDev }: BuildOptions): 
     module: {
       rules: buildLoaders(isDev),
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(paths),
     devServer: isDev ? buildDevServer(port) : undefined,
   };
 }
