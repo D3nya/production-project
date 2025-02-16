@@ -1,9 +1,9 @@
-import { WebpackPluginInstance, ProgressPlugin } from "webpack";
+import { WebpackPluginInstance, ProgressPlugin, DefinePlugin, HotModuleReplacementPlugin } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildPaths } from "./types/config";
+import { BuildPaths, IsDevType } from "./types/config";
 
-export function buildPlugins(paths: BuildPaths): WebpackPluginInstance[] {
+export function buildPlugins(paths: BuildPaths, isDev: IsDevType): WebpackPluginInstance[] {
   return [
     new HtmlWebpackPlugin({ template: paths.html }),
     new ProgressPlugin(),
@@ -11,5 +11,9 @@ export function buildPlugins(paths: BuildPaths): WebpackPluginInstance[] {
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].css",
     }),
+    new DefinePlugin({
+      IS_DEV: JSON.stringify(isDev),
+    }),
+    new HotModuleReplacementPlugin(),
   ];
 }

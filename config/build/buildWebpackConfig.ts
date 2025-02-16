@@ -15,7 +15,7 @@ export function buildWebpackConfig({ mode, paths, port, isDev }: BuildOptions): 
       path: paths.build,
       clean: true,
     },
-    plugins: buildPlugins(paths),
+    plugins: buildPlugins(paths, isDev),
     module: {
       rules: buildLoaders(isDev),
     },
