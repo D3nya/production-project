@@ -16,7 +16,7 @@ export const LangSwitcher: React.FC<LangSwitcherProps> = ({ className }) => {
   };
 
   return (
-    <Button theme={ThemeButton.CLEAR} onClick={toggleLang} className={classNames(styles.LangSwitcher, {}, [className])}>
+    <Button theme={ThemeButton.CLEAR} onClick={toggleLang} className={classNames(styles.langSwitcher, {}, [className])}>
       {t("Language")}
     </Button>
   );

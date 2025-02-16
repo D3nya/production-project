@@ -3,6 +3,7 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import eslintConfigPrettier from "eslint-config-prettier";
+import i18next from "eslint-plugin-i18next";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -12,8 +13,10 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   eslintConfigPrettier,
+  i18next.configs["flat/recommended"],
+
   {
-    ignores: ["build/**/*", "node_modules/*"],
+    ignores: ["build/**/*", "node_modules/**/*"],
     settings: {
       react: {
         version: "detect",
