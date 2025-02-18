@@ -4,8 +4,11 @@
  */
 
 import type { Config } from "jest";
+import path from "path";
 
 const config: Config = {
+  setupFilesAfterEnv: ["<rootDir>/config/jest/jest-setup.ts"],
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -71,13 +74,16 @@ const config: Config = {
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: ["node_modules"],
+  moduleDirectories: ["node_modules", "src"],
 
   // An array of file extensions your modules use
   moduleFileExtensions: ["js", "mjs", "cjs", "jsx", "ts", "tsx", "json", "node"],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    "\\.(css|less|scss)$": "identity-obj-proxy",
+    "\\.(svg)$": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],

@@ -4,6 +4,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher";
 import { useTranslation } from "react-i18next";
+import { Button } from "shared/ui/Button/Button";
 
 interface SidebarProps {
   className?: string;
@@ -19,8 +20,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ children, className }) => {
   };
 
   return (
-    <div className={classNames(styles.sidebar, { [styles.collapsed]: collapsed }, [className])}>
-      <button onClick={onToggle}>{t("Toggle")}</button>
+    <div data-testid="sidebar" className={classNames(styles.sidebar, { [styles.collapsed]: collapsed }, [className])}>
+      <Button data-testid="sidebar-toggle" onClick={onToggle}>
+        {t("Toggle")}
+      </Button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LangSwitcher className={styles.lang} />

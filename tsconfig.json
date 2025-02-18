@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    // "strict": true,
+    "lib": ["ES2015", "DOM", "DOM.Iterable"],
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
@@ -16,7 +18,10 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "esModuleInterop": true
     }
-  }
+  },
+  "include": ["src/**/*", "config/jest/jest-setup.ts"],
+  "exclude": ["node_modules", "build", "**/*.test.ts", "**/*.spec.ts"]
 }

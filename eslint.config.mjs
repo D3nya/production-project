@@ -14,7 +14,6 @@ export default [
   pluginReact.configs.flat.recommended,
   eslintConfigPrettier,
   i18next.configs["flat/recommended"],
-
   {
     ignores: ["build/**/*", "node_modules/**/*"],
     settings: {
@@ -36,6 +35,19 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
+      "i18next/no-literal-string": [
+        "error",
+        {
+          markupOnly: true,
+          ignoreAttribute: ["data-testid", "to"],
+        },
+      ],
+    },
+  },
+  {
+    files: ["**/*.test.{ts,tsx}", "**/*.stories.{ts,tsx}"],
+    rules: {
+      "i18next/no-literal-string": "off",
     },
   },
 ];
