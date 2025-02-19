@@ -2,5 +2,7 @@
   "Language": "English",
   "Toggle": "Toggle",
   "Main": "Main",
-  "About": "About"
+  "About": "About",
+  "ErrorPage": "Something went wrong",
+  "RefreshPage": "Refresh Page"
 }

@@ -16,6 +16,8 @@ export function buildPlugins(paths: BuildPaths, isDev: IsDevType): WebpackPlugin
       IS_DEV: JSON.stringify(isDev),
     }),
     new HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin.BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin.BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
   ];
 }
