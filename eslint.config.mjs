@@ -42,7 +42,6 @@ export default [
           ignoreAttribute: ["data-testid", "to"],
         },
       ],
-      "prettier/prettier": ["error", { endOfLine: "auto" }],
     },
   },
   {
