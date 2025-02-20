@@ -28,4 +28,3 @@ export function buildPlugins(paths: BuildPaths, isDev: IsDevType): WebpackPlugin
 
   return plugins;
 }
-

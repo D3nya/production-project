@@ -32,4 +32,3 @@ jobs:
         run: npm run build-storybook
       - name: Screenshot testing
         run: npm run loki:test
-
