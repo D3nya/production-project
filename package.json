@@ -17,7 +17,8 @@
     "build-storybook": "storybook build -c ./config/storybook",
     "loki:test": "loki test --chromeConcurrency 1",
     "loki:approve": "loki approve --chromeConcurrency 1",
-    "loki:update": "loki update --chromeConcurrency 1"
+    "loki:update": "loki update --chromeConcurrency 1",
+    "loki:ci": "loki --requireReference --reactUri file:./storybook-static"
   },
   "keywords": [],
   "author": "",
