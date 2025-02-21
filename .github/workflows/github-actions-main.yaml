@@ -1,6 +1,5 @@
 name: Linting, Testing, Building
 run-name: ${{ github.actor }} is running lintint, testing and building
-runs-on: ubuntu-latest
 on:
   push:
     branches: [main]
