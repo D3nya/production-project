@@ -1,5 +1,6 @@
 name: Linting, Testing, Building
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is running lintint, testing and building
+runs-on: ubuntu-latest
 on:
   push:
     branches: [main]
@@ -13,12 +14,12 @@ jobs:
       matrix:
         node-version: [22.x]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Staring Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install modules
+      - name: Install dependencies
         run: npm install
       - name: Build production project
         run: npm run build:prod

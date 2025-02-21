@@ -4,6 +4,7 @@ import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 import eslintConfigPrettier from "eslint-config-prettier";
 import i18next from "eslint-plugin-i18next";
+import storybook from "eslint-plugin-storybook";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -14,6 +15,7 @@ export default [
   pluginReact.configs.flat.recommended,
   eslintConfigPrettier,
   i18next.configs["flat/recommended"],
+  ...storybook.configs["flat/recommended"],
   {
     ignores: ["build/**/*", "node_modules/**/*"],
     settings: {
