@@ -17,7 +17,8 @@
     "build-storybook": "storybook build -c ./config/storybook",
     "loki:test": "loki test --chromeConcurrency 1",
     "loki:approve": "loki approve --chromeConcurrency 1",
-    "loki:update": "loki update --chromeConcurrency 1"
+    "loki:update": "loki update --chromeConcurrency 1",
+    "loki:ci": "loki --requireReference --reactUri file:./storybook-static"
   },
   "keywords": [],
   "author": "",
@@ -50,6 +51,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@types/eslint-config-prettier": "^6.11.3",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.2",
     "@types/react": "^19.0.10",
@@ -91,29 +93,9 @@
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
-  },
   "overrides": {
     "ink": {
       "react": "^17.0.2"
-    }
-  },
-  "loki": {
-    "configurations": {
-      "chrome.laptop": {
-        "target": "chrome.app",
-        "width": 1366,
-        "height": 768,
-        "deviceScaleFactor": 1,
-        "mobile": false
-      },
-      "chrome.iphone7": {
-        "target": "chrome.app",
-        "preset": "iPhone 7"
-      }
     }
   }
 }
