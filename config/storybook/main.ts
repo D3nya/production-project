@@ -16,8 +16,21 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: "@storybook/react-webpack5",
-    options: {},
+    options: {
+      builder: {
+        useSWC: true,
+      },
+    },
   },
+  swc: () => ({
+    jsc: {
+      transform: {
+        react: {
+          runtime: "automatic",
+        },
+      },
+    },
+  }),
   webpackFinal: async (config: Configuration) => {
     config.module = config.module || {};
     config.module.rules = config.module.rules || [];

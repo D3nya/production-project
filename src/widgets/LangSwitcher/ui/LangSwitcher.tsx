@@ -6,9 +6,10 @@ import styles from "./LangSwitcher.module.scss";
 
 interface LangSwitcherProps {
   className?: string;
+  short?: boolean;
 }
 
-export const LangSwitcher: React.FC<LangSwitcherProps> = ({ className }) => {
+export const LangSwitcher: React.FC<LangSwitcherProps> = ({ className, short }) => {
   const { t, i18n } = useTranslation();
 
   const toggleLang = async () => {
@@ -17,7 +18,7 @@ export const LangSwitcher: React.FC<LangSwitcherProps> = ({ className }) => {
 
   return (
     <Button theme={ThemeButton.CLEAR} onClick={toggleLang} className={classNames(styles.langSwitcher, {}, [className])}>
-      {t("Language")}
+      {t(short ? "shortLanguage" : "Language")}
     </Button>
   );
 };
