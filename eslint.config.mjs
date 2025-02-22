@@ -5,6 +5,17 @@ import pluginReact from "eslint-plugin-react";
 import eslintConfigPrettier from "eslint-config-prettier";
 import i18next from "eslint-plugin-i18next";
 import storybook from "eslint-plugin-storybook";
+import { FlatCompat } from "@eslint/eslintrc";
+import { fileURLToPath } from "url";
+import path from "path";
+
+// mimic CommonJS variables -- not needed if using CommonJS
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -13,9 +24,11 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  pluginReact.configs.flat["jsx-runtime"],
   eslintConfigPrettier,
   i18next.configs["flat/recommended"],
   ...storybook.configs["flat/recommended"],
+  ...compat.extends("plugin:react-hooks/recommended"),
   {
     ignores: ["build/**/*", "node_modules/**/*"],
     settings: {

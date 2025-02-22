@@ -82,6 +82,40 @@ export const ClearDark: Story = {
   decorators: [ThemeDecorator(Theme.DARK)],
 };
 
+// CLEAR INVERTED
+
+export const ClearInvertedSizeMLight: Story = {
+  args: {
+    children: "Button Text",
+    theme: ThemeButton.CLEAR_INVERTED,
+    size: SizeButton.M,
+  },
+};
+
+export const ClearInvertedSizeLLight: Story = {
+  args: {
+    children: "Button Text",
+    theme: ThemeButton.CLEAR_INVERTED,
+    size: SizeButton.L,
+  },
+};
+
+export const ClearInvertedSizeXlLight: Story = {
+  args: {
+    children: "Button Text",
+    theme: ThemeButton.CLEAR_INVERTED,
+    size: SizeButton.XL,
+  },
+};
+
+export const ClearInvertedDark: Story = {
+  args: {
+    children: "Button Text",
+    theme: ThemeButton.CLEAR_INVERTED,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};
+
 // OUTLINE
 
 export const OutlineSizeMLight: Story = {

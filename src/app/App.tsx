@@ -1,4 +1,3 @@
-import "./styles/index.scss";
 import React from "react";
 import { useTheme } from "app/providers/ThemeProviders";
 import { classNames } from "shared/lib/classNames/classNames";
