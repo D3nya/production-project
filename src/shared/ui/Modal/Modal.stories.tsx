@@ -8,8 +8,8 @@ const meta = {
   component: Modal,
   parameters: {
     layout: "fullscreen",
+    loki: { skip: true },
   },
-  tags: ["autodocs"],
   argTypes: {},
 } satisfies Meta<typeof Modal>;
 

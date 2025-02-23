@@ -5,5 +5,7 @@
   "About": "About",
   "ErrorPage": "Something went wrong",
   "RefreshPage": "Refresh Page",
-  "signIn": "Sign In"
+  "signIn": "Sign In",
+  "Increment": "Increment",
+  "Decrement": "Decrement"
 }

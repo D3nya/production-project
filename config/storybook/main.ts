@@ -1,9 +1,10 @@
+import path from "path";
 import type { StorybookConfig } from "@storybook/react-webpack5";
 import { Configuration } from "webpack";
 import { BuildPaths } from "../build/types/config";
-import path from "path";
 import { buildSassLoader } from "../build/loaders/buildSassLoader";
 import { buildSvgLoader } from "../build/loaders/buildSvgLoader";
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
 
 const config: StorybookConfig = {
   stories: ["../../src/**/*.mdx", "../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -55,6 +56,14 @@ const config: StorybookConfig = {
     }
 
     config.module.rules.push(buildSvgLoader());
+
+    // Добавляем поддержку абсолютных путей
+    config.resolve.plugins = [
+      ...(config.resolve.plugins || []),
+      new TsconfigPathsPlugin({
+        configFile: path.resolve(__dirname, "..", "..", "tsconfig.json"),
+      }),
+    ];
 
     return config;
   },

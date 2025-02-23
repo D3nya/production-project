@@ -5,5 +5,7 @@
   "About": "О сайте",
   "ErrorPage": "Что-то пошло не так",
   "RefreshPage": "Обновить страницу",
-  "signIn": "Войти"
+  "signIn": "Войти",
+  "Increment": "Увеличить",
+  "Decrement": "Уменьшить"
 }

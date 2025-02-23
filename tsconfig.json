@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     // "strict": true,
-    "lib": ["ES2015", "DOM", "DOM.Iterable"],
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "ESNext",
@@ -11,9 +10,13 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "*": ["./src/*"]
+      "app/*": ["app/*"],
+      "pages/*": ["pages/*"],
+      "widgets/*": ["widgets/*"],
+      "entities/*": ["entities/*"],
+      "shared/*": ["shared/*"]
     }
   },
   "ts-node": {
@@ -22,6 +25,6 @@
       "esModuleInterop": true
     }
   },
-  "include": ["src/**/*", "config/jest/jest-setup.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "config/jest/jest-setup.ts"],
   "exclude": ["node_modules", "build", "**/*.test.ts", "**/*.spec.ts"]
 }
