@@ -26,5 +26,5 @@
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "config/jest/jest-setup.ts"],
-  "exclude": ["node_modules", "build", "**/*.test.ts", "**/*.spec.ts"]
+  "exclude": ["node_modules", "build", "**/*.test.ts", "**/*.spec.ts", "json-server"]
 }
