@@ -16,7 +16,8 @@
       "pages/*": ["pages/*"],
       "widgets/*": ["widgets/*"],
       "entities/*": ["entities/*"],
-      "shared/*": ["shared/*"]
+      "shared/*": ["shared/*"],
+      "features/*": ["features/*"]
     }
   },
   "ts-node": {

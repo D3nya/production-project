@@ -88,6 +88,7 @@ const config: Config = {
     "^widgets/(.*)$": "<rootDir>/src/widgets/$1",
     "^entities/(.*)$": "<rootDir>/src/entities/$1",
     "^shared/(.*)$": "<rootDir>/src/shared/$1",
+    "^featured/(.*)$": "<rootDir>/src/featured/$1",
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader

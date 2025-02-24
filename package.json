@@ -22,7 +22,8 @@
     "loki:ci": "loki --requireReference --reactUri file:./storybook-static",
     "visual:report:json": "node ./scripts/generate-visual-json-report.js",
     "visual:report:html": "reg-cli --from .loki/report.json --report .loki/report.html",
-    "visual:report": "npm run visual:report:json && npm run visual:report:html"
+    "visual:report": "npm run visual:report:json && npm run visual:report:html",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
