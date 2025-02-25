@@ -10,5 +10,6 @@
   "Decrement": "Decrement",
   "EnterLogin": "Enter login",
   "EnterPassword": "Enter password",
-  "Enter": "Enter"
+  "Enter": "Enter",
+  "Logout": "Logout"
 }

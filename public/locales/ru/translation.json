@@ -10,5 +10,6 @@
   "Decrement": "Уменьшить",
   "EnterLogin": "Введите логин",
   "EnterPassword": "Введите пароль",
-  "Enter": "Войти"
+  "Enter": "Войти",
+  "Logout": "Выход"
 }

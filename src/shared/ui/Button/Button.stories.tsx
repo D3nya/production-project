@@ -255,3 +255,21 @@ export const SquareDark: Story = {
   },
   decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+// DISABLED
+export const Disabled: Story = {
+  args: {
+    children: "Button Text",
+    theme: ThemeButton.OUTLINE,
+    disabled: true,
+  },
+};
+
+export const DisabledDark: Story = {
+  args: {
+    children: "Button Text",
+    theme: ThemeButton.OUTLINE,
+    disabled: true,
+  },
+  decorators: [ThemeDecorator(Theme.DARK)],
+};

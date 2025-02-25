@@ -2,5 +2,5 @@ npm run build:prod
 npm run eslint
 npm run stylelint
 npm run test
-npm run storybook
+npm run storybook &
 npm run loki:test
